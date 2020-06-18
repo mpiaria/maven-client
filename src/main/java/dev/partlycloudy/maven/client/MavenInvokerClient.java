@@ -12,4 +12,9 @@ public class MavenInvokerClient implements MavenClient {
     public MavenInvokerClient(Invoker invoker) {
         this.invoker = invoker;
     }
+
+    @Override
+    public void clean() {
+
+    }
 }

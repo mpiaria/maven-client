@@ -1,13 +1,11 @@
 plugins {
+    id 'idea'
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
     id 'java'
 }
 
 group 'dev.partlycloudy'
 version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     implementation platform('org.springframework:spring-framework-bom:5.1.7.RELEASE')
@@ -17,4 +15,13 @@ dependencies {
     implementation('org.springframework:spring-context')
 
     testImplementation('junit:junit:4.12')
+}
+
+java {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
 }
